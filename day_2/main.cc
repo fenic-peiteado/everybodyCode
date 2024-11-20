@@ -35,7 +35,7 @@ int main() {
   for(auto values : keys) {
     auto found = words_line.find(values);
     while( found != std::string::npos ) {
-      found = words_line.find(found);
+      found = words_line.find(values, found+1);
       contador++;
       std::cout << values << "\n";
     }
